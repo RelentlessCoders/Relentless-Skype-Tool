@@ -20,8 +20,8 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer1.Start()
-        premium()
+        'Timer1.Start()
+        'premium()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -33,7 +33,7 @@ Public Class Form1
 
 
             Dim premium As New WebClient
-            Dim window As String = premium.DownloadString("http://www.xenon-stresser.com/Random.php")
+            Dim window As String = premium.DownloadString("")
             If window.Contains("7") Then
                 MessageBox.Show("Hello there!" + vbNewLine + "If you are enjoying the free tool then" + vbNewLine + " Please consider buying the premium version." + vbNewLine + "Premium Features: Built in Skypebot, Stresser and No ads!", "Premium", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Process.Start("") ' Screenshot here
